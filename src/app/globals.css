@@ -1,0 +1,212 @@
+@import "tailwindcss";
+
+:root {
+ --background: #faf8f6;
+ --foreground: #2d2a26;
+ --card: #ffffff;
+ --card-foreground: #2d2a26;
+ --primary: #c4786a;
+ --primary-foreground: #ffffff;
+ --secondary: #e8e4df;
+ --secondary-foreground: #4a4540;
+ --muted: #f0ece8;
+ --muted-foreground: #7a736c;
+ --accent: #dce8e4;
+ --accent-foreground: #3d5a52;
+ --border: #e5dfd8;
+ --input: #e5dfd8;
+ --ring: #c4786a;
+}
+
+.dark {
+ --background: #1a1816;
+ --foreground: #f0ece8;
+ --card: #242120;
+ --card-foreground: #f0ece8;
+ --primary: #d4958a;
+ --primary-foreground: #1a1816;
+ --secondary: #2e2a28;
+ --secondary-foreground: #d4cfc8;
+ --muted: #2e2a28;
+ --muted-foreground: #9a928a;
+ --accent: #2a3532;
+ --accent-foreground: #b8d4c8;
+ --border: #3a3532;
+ --input: #3a3532;
+ --ring: #d4958a;
+}
+
+@theme inline {
+ --color-background: var(--background);
+ --color-foreground: var(--foreground);
+ --color-card: var(--card);
+ --color-card-foreground: var(--card-foreground);
+ --color-primary: var(--primary);
+ --color-primary-foreground: var(--primary-foreground);
+ --color-secondary: var(--secondary);
+ --color-secondary-foreground: var(--secondary-foreground);
+ --color-muted: var(--muted);
+ --color-muted-foreground: var(--muted-foreground);
+ --color-accent: var(--accent);
+ --color-accent-foreground: var(--accent-foreground);
+ --color-border: var(--border);
+ --color-input: var(--input);
+ --color-ring: var(--ring);
+ --font-sans: var(--font-dm-sans);
+ --font-serif: var(--font-fraunces);
+}
+
+body {
+ background: var(--background);
+ color: var(--foreground);
+ font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Capacitor native shell - notch / home-indicator safe areas */
+.capacitor-native body {
+ padding-top: env(safe-area-inset-top);
+ padding-bottom: env(safe-area-inset-bottom);
+ padding-left: env(safe-area-inset-left);
+ padding-right: env(safe-area-inset-right);
+}
+
+/* Capacitor native shell - respect notch / home indicator */
+html.capacitor-native,
+body.capacitor-native {
+ padding-top: env(safe-area-inset-top);
+ padding-right: env(safe-area-inset-right);
+ padding-bottom: env(safe-area-inset-bottom);
+ padding-left: env(safe-area-inset-left);
+}
+
+.capacitor-native .min-h-screen {
+ min-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+}
+
+.font-serif {
+ font-family: var(--font-serif), Georgia, serif;
+}
+
+.gradient-aura {
+ background: linear-gradient(135deg, #faf8f6 0%, #f5ebe8 40%, #e8f0ed 100%);
+}
+
+.dark .gradient-aura {
+ background: linear-gradient(135deg, #1a1816 0%, #241e1c 40%, #1a2420 100%);
+}
+
+.glass-card {
+ background: rgba(255, 255, 255, 0.7);
+ backdrop-filter: blur(12px);
+ border: 1px solid rgba(229, 223, 216, 0.6);
+}
+
+.dark .glass-card {
+ background: rgba(36, 33, 32, 0.7);
+ border: 1px solid rgba(58, 53, 50, 0.6);
+}
+
+@keyframes pulse-soft {
+ 0%, 100% { opacity: 1; }
+ 50% { opacity: 0.72; }
+}
+
+@keyframes shimmer {
+ 0% { background-position: 200% 0; }
+ 100% { background-position: -200% 0; }
+}
+
+.animate-pulse-soft {
+ animation: pulse-soft 2.5s ease-in-out infinite;
+}
+
+.animate-shimmer {
+ background-size: 200% 100%;
+ animation: shimmer 3s linear infinite;
+}
+
+/* Landing page - premium dark UI */
+.landing-page {
+ color-scheme: dark;
+}
+
+.gradient-aura-landing {
+ background: linear-gradient(160deg, #0f0e0d 0%, #1a1514 35%, #121a18 70%, #0d1210 100%);
+}
+
+.landing-glow {
+ pointer-events: none;
+ position: absolute;
+ border-radius: 50%;
+ filter: blur(80px);
+ opacity: 0.35;
+}
+
+.landing-glow-1 {
+ width: 480px;
+ height: 480px;
+ top: -120px;
+ right: -80px;
+ background: radial-gradient(circle, rgba(196, 120, 106, 0.45) 0%, transparent 70%);
+}
+
+.landing-glow-2 {
+ width: 400px;
+ height: 400px;
+ bottom: 20%;
+ left: -100px;
+ background: radial-gradient(circle, rgba(120, 180, 160, 0.3) 0%, transparent 70%);
+}
+
+.landing-card,
+.landing-pricing-card {
+ background: rgba(36, 33, 32, 0.65);
+ backdrop-filter: blur(16px);
+ border: 1px solid rgba(58, 53, 50, 0.7);
+}
+
+.landing-pricing-card:hover {
+ border-color: rgba(212, 149, 138, 0.35);
+ transform: translateY(-2px);
+}
+
+.landing-social-proof {
+ background: rgba(36, 33, 32, 0.5);
+ backdrop-filter: blur(12px);
+}
+
+.landing-cta {
+ background: linear-gradient(135deg, rgba(196, 120, 106, 0.12) 0%, rgba(36, 33, 32, 0.8) 50%, rgba(120, 180, 160, 0.08) 100%);
+ border: 1px solid rgba(212, 149, 138, 0.2);
+}
+
+@keyframes fade-up {
+ from {
+ opacity: 0;
+ transform: translateY(16px);
+ }
+ to {
+ opacity: 1;
+ transform: translateY(0);
+ }
+}
+
+.animate-fade-up {
+ animation: fade-up 0.7s ease-out both;
+}
+
+.animate-fade-up-delay {
+ animation: fade-up 0.7s ease-out 0.15s both;
+}
+
+@media print {
+ header,
+ nav,
+ .no-print {
+ display: none !important;
+ }
+ body {
+ background: white !important;
+ color: black !important;
+ }
+}

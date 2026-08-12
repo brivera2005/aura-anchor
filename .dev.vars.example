@@ -1,0 +1,62 @@
+# Local preview with wrangler dev (copy to .dev.vars)
+
+NEXTJS_ENV=development
+
+
+
+# Required for full app functionality
+
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+
+NEXT_PUBLIC_APP_URL=http://localhost:8787
+
+ENCRYPTION_KEY=your-64-char-hex-key
+
+
+
+# AI (optional — app uses mock AI if none are set)
+
+# Google Gemini is preferred when both are set
+
+GOOGLE_AI_API_KEY=your-gemini-api-key
+
+# GEMINI_API_KEY=your-gemini-api-key
+
+# OPENAI_API_KEY=sk-your-openai-key
+
+
+
+# Admin (comma-separated emails that bypass paywall — optional)
+
+# ADMIN_EMAILS=owner@example.com
+
+
+
+# Stripe (required for production subscriptions)
+
+STRIPE_SECRET_KEY=sk_test_your_secret_key
+
+STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret
+
+STRIPE_PRICE_ID=price_your_monthly_price_id
+
+STRIPE_LIFETIME_PRICE_ID=price_your_lifetime_price_id
+
+# STRIPE_ANNUAL_PRICE_ID=price_your_annual_price_id
+
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_your_publishable_key
+
+NEXT_PUBLIC_SUBSCRIPTION_PRICE=14.99
+
+NEXT_PUBLIC_LIFETIME_PRICE=449
+
+NEXT_PUBLIC_ANNUAL_PRICE=119
+
+STRIPE_TRIAL_DAYS=3
+
+NEXT_PUBLIC_STRIPE_TRIAL_DAYS=3
+

@@ -1,0 +1,30 @@
+{
+  "name": "Aura & Anchor",
+  "short_name": "Aura",
+  "description": "Guided relationship healing for two",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#faf8f6",
+  "theme_color": "#c4786a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

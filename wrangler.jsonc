@@ -1,0 +1,30 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"main": ".open-next/worker.js",
+	"name": "aura-anchor",
+	"compatibility_date": "2026-06-15",
+	"compatibility_flags": [
+		"nodejs_compat",
+		"global_fetch_strictly_public"
+	],
+	"assets": {
+		"directory": ".open-next/assets",
+		"binding": "ASSETS"
+	},
+	"services": [
+		{
+			"binding": "WORKER_SELF_REFERENCE",
+			"service": "aura-anchor"
+		}
+	],
+	"images": {
+		"binding": "IMAGES"
+	},
+	"vars": {
+		"NEXT_PUBLIC_APP_URL": "http://localhost:3000",
+		"NEXT_PUBLIC_SUPABASE_URL": "https://your-project.supabase.co",
+		"NEXT_PUBLIC_SUBSCRIPTION_PRICE": "14.99",
+		"NEXT_PUBLIC_LIFETIME_PRICE": "449",
+		"NEXT_PUBLIC_ANNUAL_PRICE": "119"
+	}
+}

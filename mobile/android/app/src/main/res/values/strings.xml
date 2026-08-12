@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Aura &amp; Anchor</string>
+    <string name="title_activity_main">Aura &amp; Anchor</string>
+    <string name="package_name">dev.auraanchor.app</string>
+    <string name="custom_url_scheme">dev.auraanchor.app</string>
+</resources>
